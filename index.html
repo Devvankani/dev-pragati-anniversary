@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dev ❤️ Pragati</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#ff9aa2,#ffc3a0,#ffd1dc);
+overflow-x:hidden;
+}
+
+section{
+min-height:100vh;
+padding:70px 20px;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+position:relative;
+}
+
+h1{
+font-size:3rem;
+color:white;
+margin-bottom:15px;
+text-shadow:2px 2px 10px rgba(0,0,0,.2);
+}
+
+h2{
+color:white;
+margin-bottom:20px;
+}
+
+p{
+color:white;
+max-width:800px;
+line-height:1.8;
+}
+
+.hero{
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+}
+
+.hero h1{
+font-size:4rem;
+}
+
+.hero p{
+font-size:1.2rem;
+}
+
+.btn{
+margin-top:25px;
+padding:14px 35px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4d88;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.counter{
+margin-top:25px;
+background:rgba(255,255,255,.2);
+padding:20px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+color:white;
+font-size:20px;
+}
+
+.timeline{
+width:100%;
+max-width:700px;
+}
+
+.timeline-card{
+background:rgba(255,255,255,.25);
+backdrop-filter:blur(10px);
+margin:20px 0;
+padding:20px;
+border-radius:20px;
+not in center why 
+color:white;
+
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+width:100%;
+max-width:1200px;
+}
+
+.memory{
+background:white;
+overflow:hidden;
+border-radius:25px;
+box-shadow:0 15px 30px rgba(0,0,0,.15);
+transition:.4s;
+}
+
+.memory:hover{
+transform:translateY(-10px);
+}
+
+.memory img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.memory-content{
+padding:20px;
+}
+
+.memory-content h3{
+color:#ff4d88;
+margin-bottom:10px;
+}
+
+.memory-content p{
+color:#444;
+}
+
+.reason-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+width:100%;
+max-width:1000px;
+}
+
+.reason{
+background:white;
+padding:25px;
+border-radius:20px;
+font-weight:600;
+color:#ff4d88;
+}
+
+.letter{
+background:rgba(255,255,255,.95);
+padding:40px;
+border-radius:25px;
+max-width:850px;
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+border:3px solid rgba(255,255,255,.8);
+position:relative;
+}
+
+.letter::before{
+content:"💌";
+position:absolute;
+top:-18px;
+left:20px;
+font-size:35px;
+}
+
+.letter p{
+color:#444;
+font-size:18px;
+line-height:2;
+text-align:left;
+}
+
+.story-card p{
+color:#444;
+font-size:18px;
+line-height:2;
+text-align:left;
+}
+
+.final{
+background:linear-gradient(135deg,#ff5e8e,#ff85a2);
+}
+
+.final h1{
+font-size:4rem;
+}
+
+.final-message{
+font-size:1.3rem;
+}
+
+nav{
+position:fixed;
+bottom:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-around;
+padding:12px;
+box-shadow:0 -5px 15px rgba(0,0,0,.15);
+z-index:999;
+}
+
+nav a{
+text-decoration:none;
+color:#ff4d88;
+font-weight:600;
+font-size:14px;
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:24px;
+animation:float 6s linear infinite;
+z-index:1;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+
+.teddy{
+font-size:90px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-20px);
+}
+}
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.8rem;
+}
+
+.final h1{
+font-size:2.8rem;
+}
+
+h1{
+font-size:2.3rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div class="teddy">🧸❤️</div>
+
+<h1 id="typing"></h1>
+
+<p>
+From 9 June 2022 till today...
+every moment with you has made life more beautiful.
+</p>
+
+<div class="counter">
+❤️ Together For <span id="days"></span> Days ❤️
+</div>
+
+<button class="btn" onclick="scrollToStory()">
+💌 Open My Heart
+</button>
+
+</section>
+
+<section id="story" class="reveal">
+
+<h1>Our Love Story ❤️</h1>
+
+<div class="letter story-card">
+
+<p>
+
+✨ We started as strangers.
+
+<br><br>
+
+😊 Then we became friends.
+
+<br><br>
+
+💕 Slowly, our conversations became the best part of our days.
+
+<br><br>
+
+❤️ Then came the most special day...
+
+<br><br>
+
+🌹 9 June 2022
+
+<br><br>
+
+The day I gathered all my courage and told you what my heart already knew.
+
+<br><br>
+
+From that moment, life became more colorful, more meaningful, and much happier.
+
+<br><br>
+
+Every laugh, every late-night conversation, every little memory with you has become a treasure in my heart.
+
+<br><br>
+
+🫂 Through good days and difficult days, you have always been someone special to me.
+
+<br><br>
+
+Today, as we celebrate another anniversary, I just want to say...
+
+<br><br>
+
+Thank you for being part of my life.
+
+<br><br>
+
+♾️ And this beautiful story is only getting started.
+
+</p>
+
+</div>
+
+</section>
+<div class="timeline">
+
+<div class="timeline-card">
+📱 First Conversation
+</div>
+
+<div class="timeline-card">
+😊 First Beautiful Memory
+</div>
+
+<div class="timeline-card">
+❤️ 9 June 2022 - The Day I Proposed You
+</div>
+
+<div class="timeline-card">
+🌹 Countless Beautiful Memories
+</div>
+
+<div class="timeline-card">
+♾️ Forever Together
+</div>
+
+</div>
+
+</section>
+
+<section class="reveal">
+
+<h1>Our Memories 📸</h1>
+
+<div class="gallery">
+<section id="memories">
+<div class="memory">
+<img src="photo1.jpg">
+<div class="memory-content">
+<h3>Two Hearts, One Moment ❤️</h3>
+<p>Even though it is just a picture, it feels like so much more.
+
+Seeing us looking toward each other reminds me that no matter where we are, our hearts always find their way back to one another.
+
+This picture feels like the beginning of a beautiful story that I never want to end.</p>
+</div>
+</div>
+
+<div class="memory">
+<img src="photo2.jpg">
+<div class="memory-content">
+<h3>The Eyes That Speak Everything 👀❤️</h3>
+<p>People say eyes can express what words cannot.
+
+Whenever I look at your eyes, I see kindness, happiness, comfort, and a love that makes me feel special.
+
+This picture reminds me that sometimes a single look can say a thousand things.</p>
+</div>
+</div>
+
+<div class="memory">
+<img src="photo3.jpg">
+<div class="memory-content">
+<h3>Our Avakin Life Days 🎮💕</h3>
+<p>Not every love story begins in the same way.
+
+One of our favorite memories was spending time together in Avakin Life, creating moments, exploring places, and simply enjoying each other's company.
+
+Even inside a virtual world, being with you felt real and special.</p>
+</div>
+</div>
+
+<div class="memory">
+<img src="photo4.jpg">
+<div class="memory-content">
+<h3>Booyah Together 🔥❤️</h3>
+<p>Free Fire was never just a game for me.
+
+The best part was getting to play with you, laughing together, helping each other, and creating memories that were much bigger than the game itself.
+
+Every match became special because you were there.</p>
+</div>
+</div>
+
+<div class="memory">
+<img src="photo5.jpg">
+<div class="memory-content">
+<h3>The Birthday Wish I'll Never Forget 🎂❤️</h3>
+<p>Out of all the birthday wishes I received, yours touched my heart the most.
+
+The effort, the kindness, and the beautiful words you wrote made that day unforgettable.
+
+Whenever I think about that message, I am reminded how lucky I am to have someone as caring and thoughtful as you in my life.</p>
+</div>
+</div>
+
+<div class="memory">
+<img src="photo6.jpg">
+<div class="memory-content">
+<h3>Thank You For Coming Into My Life 🌹</h3>
+<p>Sometimes life surprises us with people who change everything.
+
+Meeting you was one of those beautiful surprises.
+
+Thank you for entering my life, bringing happiness into my days, and giving me memories that I will always cherish.
+
+You became one of the most beautiful parts of my story.</p>
+</div>
+</div>
+
+<div class="memory">
+<img src="photo7.jpg">
+<div class="memory-content">
+<h3>Our Random Late-Night Talks 🌙❤️</h3>
+<p>Some of my favorite memories are the simplest ones.
+
+Those random late-night conversations, funny signs, silly messages, and endless chats made ordinary nights feel special.
+
+No matter what we talked about, every conversation with you was something I looked forward to.</p>
+</div>
+</div>
+
+<div class="memory">
+<img src="photo8.jpg">
+<div class="memory-content">
+<h3>Laughing Until We Couldn't Stop 😂💕</h3>
+<p>There were moments when we laughed so much that we could barely continue the conversation.
+
+One laughing emoji became ten, then twenty, and before we knew it, we were laughing endlessly together.
+
+Those moments remind me how happy and comfortable I feel whenever I am with you.</p>
+</div>
+</div>
+
+<div class="memory">
+<img src="photo9.jpg">
+<div class="memory-content">
+<h3>Our First AI Couple Picture 🤖❤️</h3>
+<p>Add your description here later.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+</section>
+
+<section class="reveal">
+
+<h1>Why I Love You ❤️</h1>
+
+<div class="reason-container">
+
+<div class="reason">❤️ Your Smile</div>
+<div class="reason">❤️ Your Caring Nature</div>
+<div class="reason">❤️ Your Kind Heart</div>
+<div class="reason">❤️ Your Support</div>
+<div class="reason">❤️ Your Voice</div>
+<div class="reason">❤️ Your Presence</div>
+<div class="reason">❤️ Your Beautiful Soul</div>
+<div class="reason">❤️ Everything About You</div>
+
+</div>
+
+</section>
+
+<section class="reveal">
+
+<h1>My Letter To You 💌</h1>
+
+<div class="letter">
+
+<section id="letter">
+
+<p>
+
+My Dearest Pragati,
+
+<br><br>
+
+Sometimes I wonder how different my life would be if our paths had never crossed.
+
+<br><br>
+
+Then I smile, because thankfully I don't have to imagine that life.
+
+<br><br>
+
+Since 9 June 2022, you have given me countless reasons to smile.
+
+<br><br>
+
+You have been my happiness during good days and my strength during difficult ones.
+
+<br><br>
+
+Thank you for every conversation that made me laugh.
+
+Thank you for every memory that became a part of my heart.
+
+Thank you for supporting me, understanding me, and standing beside me.
+
+<br><br>
+
+No matter how many anniversaries we celebrate, I will always be grateful for the day our story began.
+
+<br><br>
+
+You are not just someone I love.
+
+<br><br>
+
+You are my comfort.
+
+You are my peace.
+
+You are my favorite notification.
+
+You are one of the most beautiful parts of my life.
+
+<br><br>
+
+I look forward to creating many more memories, sharing many more smiles, and celebrating many more anniversaries with you.
+
+<br><br>
+
+Happy Anniversary My Love ❤️
+
+<br><br>
+
+Forever Yours,
+
+<br>
+
+Dev ❤️
+
+</p>
+
+
+
+</div>
+</section>
+</section>
+
+<section class="final reveal">
+<section id="final">
+<h1>Dev ❤️ Pragati</h1>
+
+<p class="final-message">
+
+9 June 2022 → Forever ♾️
+
+<br><br>
+
+Every love story is beautiful...
+
+But ours is my favorite.
+
+❤️
+
+</p>
+
+<br>
+
+<div class="teddy">
+🧸💕
+</div>
+
+</section>
+</section>
+
+<nav>
+    <a href="#">🏠 Home</a>
+    <a href="#story">❤️ Story</a>
+    <a href="#memories">📸 Memories</a>
+    <a href="#letter">💌 Letter</a>
+    <a href="#final">♾️ Forever</a>
+</nav>
+<script>
+
+const text="Happy Anniversary My Love ❤️";
+let i=0;
+
+function typeText(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typeText,100);
+}
+}
+typeText();
+
+function scrollToStory(){
+document.getElementById("story")
+.scrollIntoView({
+behavior:"smooth"
+});
+}
+
+const startDate=new Date("June 9, 2022");
+const today=new Date();
+
+const diff=today-startDate;
+
+const days=Math.floor(
+diff/(1000*60*60*24)
+);
+
+document.getElementById("days")
+.innerHTML=days;
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=
+(Math.random()*20+15)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+}
+
+setInterval(createHeart,300);
+
+const reveals=
+document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll",()=>{
+
+reveals.forEach(item=>{
+
+const top=item.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+item.classList.add("active");
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
